@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STEPUP Footwear</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#090909;
+color:white;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+.top-bar{
+background:#b40018;
+text-align:center;
+padding:10px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#000;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:34px;
+font-weight:800;
+}
+
+.logo span{
+color:#e00022;
+}
+
+nav a{
+margin:0 18px;
+font-size:15px;
+}
+
+.search{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.search input{
+padding:12px;
+width:240px;
+background:#111;
+border:1px solid #333;
+color:white;
+border-radius:30px;
+}
+
+.icons i{
+margin-left:20px;
+font-size:22px;
+cursor:pointer;
+}
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:80px 8%;
+background:linear-gradient(90deg,#000,#111);
+}
+
+.hero h4{
+color:#ff4040;
+letter-spacing:5px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:85px;
+line-height:90px;
+font-weight:800;
+}
+
+.hero h1 span{
+color:#ff1e2d;
+}
+
+.hero p{
+margin:30px 0;
+color:#ddd;
+}
+
+.btn{
+padding:15px 40px;
+background:#d30022;
+display:inline-block;
+border-radius:5px;
+font-weight:bold;
+}
+
+.hero img{
+width:100%;
+}
+
+.section-title{
+text-align:center;
+margin:70px 0 40px;
+font-size:35px;
+}
+
+.brands{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+padding:0 8%;
+}
+
+.brand{
+background:#151515;
+padding:30px;
+text-align:center;
+font-size:35px;
+font-weight:bold;
+border-radius:10px;
+transition:.3s;
+}
+
+.brand:hover{
+background:#d30022;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:0 8% 80px;
+}
+
+.card{
+background:#151515;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.price{
+font-size:24px;
+color:#ff2b3d;
+margin:10px 0;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.buttons button{
+flex:1;
+padding:12px;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cart{
+background:#333;
+color:white;
+}
+
+.buy{
+background:#d30022;
+color:white;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+padding:50px 8%;
+background:#111;
+text-align:center;
+}
+
+.features i{
+font-size:40px;
+color:#d30022;
+margin-bottom:15px;
+}
+
+footer{
+background:#000;
+padding:60px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:50px;
+}
+
+footer input{
+width:100%;
+padding:14px;
+margin:10px 0;
+background:#111;
+border:1px solid #333;
+color:white;
+}
+
+footer button{
+padding:15px;
+width:100%;
+background:#d30022;
+border:none;
+color:white;
+font-weight:bold;
+}
+
+footer h3{
+margin-bottom:20px;
+}
+
+footer ul{
+list-style:none;
+}
+
+footer li{
+margin:12px 0;
+color:#ccc;
+}
+
+.bottom{
+margin-top:50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #222;
+padding-top:25px;
+}
+
+.social i{
+margin-left:15px;
+font-size:22px;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+line-height:60px;
+}
+
+.brands{
+grid-template-columns:repeat(2,1fr);
+}
+
+.features{
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+🔥 SALE IS LIVE • 30% OFF FOR NEW CUSTOMERS
+</div>
+
+<header>
+
+<div class="logo">
+STEP<span>UP</span>
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Men</a>
+<a href="#">Women</a>
+<a href="#">Sports</a>
+<a href="#">Brands</a>
+<a href="#">Sale</a>
+
+</nav>
+
+<div class="search">
+
+<input type="text" placeholder="Search shoes...">
+
+<div class="icons">
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-regular fa-user"></i>
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h4>SPECIAL OFFER</h4>
+
+<h1>30% <span>OFF</span><br>FOR NEW CUSTOMERS</h1>
+
+<p>
+Discover premium sneakers and stylish footwear from the world's best brands.
+</p>
+
+<a href="#" class="btn">SHOP NOW</a>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900" alt="shoe">
+
+</div>
+
+</section>
+
+<h2 class="section-title">Top Brands</h2>
+
+<div class="brands">
+
+<div class="brand">Nike</div>
+<div class="brand">Puma</div>
+<div class="brand">Bata</div>
+<div class="brand">Paragon</div>
+<div class="brand">VKC</div>
+
+</div>
+
+<h2 class="section-title">Popular Footwear</h2>
+
+<section class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
+
+<div class="card-content">
+
+<h3>Nike Air Max</h3>
+
+<div class="price">₹8,999</div>
+
+<div class="buttons">
+
+<button class="cart">Add to Cart</button>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600">
+
+<div class="card-content">
+
+<h3>Puma Runner</h3>
+
+<div class="price">₹6,499</div>
+
+<div class="buttons">
+
+<button class="cart">Add to Cart</button>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600">
+
+<div class="card-content">
+
+<h3>Bata Classic</h3>
+
+<div class="price">₹2,499</div>
+
+<div class="buttons">
+
+<button class="cart">Add to Cart</button>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600">
+
+<div class="card-content">
+
+<h3>Formal Leather Shoe</h3>
+
+<div class="price">₹3,999</div>
+
+<div class="buttons">
+
+<button class="cart">Add to Cart</button>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div>
+<i class="fa-solid fa-truck"></i>
+<h3>Free Delivery</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-shield-halved"></i>
+<h3>100% Original</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-rotate-left"></i>
+<h3>Easy Returns</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-headset"></i>
+<h3>24/7 Support</h3>
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Shipping Address</h3>
+
+<input placeholder="Full Name">
+
+<input placeholder="Mobile Number">
+
+<input placeholder="Address">
+
+<input placeholder="Pincode">
+
+<button>Save Address</button>
+
+</div>
+
+<div>
+
+<h3>Customer Service</h3>
+
+<ul>
+
+<li>Contact Us</li>
+<li>Track Order</li>
+<li>Returns</li>
+<li>Shipping Policy</li>
+<li>FAQs</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<ul>
+
+<li>📞 +91 9876543210</li>
+<li>✉ support@stepup.com</li>
+<li>📍 Bengaluru, India</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<p>© 2026 STEPUP Footwear. All Rights Reserved.</p>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-youtube"></i>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
